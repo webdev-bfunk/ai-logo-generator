@@ -5,9 +5,9 @@ import Lookup from '@/app/_data/Lookup'
 import Colors from '@/app/_data/Colors'
 
 
-function LogoColorPalette({ onHandleInputChange }) {
+function LogoColorPalette({ onHandleInputChange, formData }) {
 
-    const [selectedOption, setSelectedOption] = useState();
+    const [selectedOption, setSelectedOption] = useState(formData?.palette);
 
 
     return (

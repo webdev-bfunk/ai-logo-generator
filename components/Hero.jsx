@@ -17,13 +17,13 @@ function Hero() {
                 <input
                     onChange={(event) => setLogoTitle(event?.target.value)}
                     placeholder={Lookup.InputTitlePlaceholder}
-                    className='p-3 border rounded-md w-full shadow-md' />
+                    className='p-3 border rounded-md w-full shadow-md focus:border-primary focus:border-2 focus:outline-none' />
                 <Link href={'/create?title=' + logoTitle}>
-                    <Button className="p-6 w-full">Get Started</Button>
+                    <Button className="p-6 w-full shadow-md">Get Started</Button>
                 </Link>
             </div>
         </div>
     )
 }
-
+// https://www.youtube.com/watch?v=VjimQ-VEIiE&t=3797s 1hr 30mins
 export default Hero
