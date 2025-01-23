@@ -1,6 +1,7 @@
 import { Host_Grotesk } from "next/font/google";
 import "./globals.css";
 import Provider from "./provider";
+import { Suspense } from 'react'
 
 const host_Grotesk = Host_Grotesk({
   subsets: ["latin"],
@@ -17,9 +18,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${host_Grotesk.variable} antialiased`}
       >
-        <Provider>
-          {children}
-        </Provider>
+        <Suspense>
+          <Provider>
+            {children}
+          </Provider>
+        </Suspense>
       </body>
     </html>
   );
